@@ -48,6 +48,10 @@ This project utilizes Gradle plugin [Diffplug Spotless](https://github.com/diffp
 and style guidelines with every build.
 
 To format code according to style guidelines, you can run **spotlessApply** task.
+
+## Solution
+
+Utilizing CMD with the user being defined as "webhook" and the password as "password" the following solution provides an encrypted and secure API to create/add employees, retreive employee by uuid, and recieve all employees.
 `./gradlew spotlessApply`
 
 The spotless plugin will also execute check-and-validation tasks as part of the gradle **build** task.
