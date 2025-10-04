@@ -52,7 +52,15 @@ To format code according to style guidelines, you can run **spotlessApply** task
 ## Solution
 
 Utilizing CMD with the user being defined as "webhook" and the password as "password" the following solution provides an encrypted and secure API to create/add employees, retreive employee by uuid, and recieve all employees.
-`./gradlew spotlessApply`
+Example command for creating an mployee:
+curl.exe -u webhook:password -H "Content-Type: application/json" -X POST -d "{\"firstName\":\"Justin\",\"lastName\":\"Capili\",\"email\":\"justin.capili24@gmail.com\",\"jobTitle\":\"Software Engineer\",\"salary\":65000,\"contractHireDate\":\"2025-01-01T00:00:00Z\"}" http://localhost:8080/api/v1/employee
 
-The spotless plugin will also execute check-and-validation tasks as part of the gradle **build** task.
-`./gradlew build`
+Example command to view employees:
+curl.exe -u webhook:password -H "Content-Type: application/json" -X GET http://localhost:8080/api/v1/employee
+
+Example command to  find employee by uuid:
+curl.exe -u webhook:password -H "Content-Type: application/json" -X GET http://localhost:8080/api/v1/employee/{uuid}
+
+
+
+
